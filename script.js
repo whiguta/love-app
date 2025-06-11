@@ -14,9 +14,10 @@ const motivos = [
 function mostrarMotivo() {
   const div = document.getElementById('motivo');
   const motivo = motivos[Math.floor(Math.random() * motivos.length)];
-  div.style.opacity = 0;
+
+  div.classList.remove('show');
   setTimeout(() => {
     div.textContent = motivo;
-    div.style.opacity = 1;
-  }, 200);
+    div.classList.add('show');
+  }, 300);
 }
